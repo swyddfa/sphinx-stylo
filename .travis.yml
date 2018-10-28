@@ -1,0 +1,16 @@
+language: python
+python:
+- 3.6
+
+install:
+- pip install tox
+
+script:
+- tox
+
+deploy:
+  provider: pypi
+  user: alcarney
+  skip_cleanup: true
+  password:
+    secure: e0+8agvpwhdUieaLNM7yY7ac5ZzqROOtk4Q+MZMloOGakKyoy7Y6ewl3WGoOFlobHSuLaZ0rY30hqUaE9Uq7vt7qPTsPcd+D6ITcL/nHpfcOdOEBRaLCbIdpJ/OldKAISl+EqSc1KUEYRnmC6f1vYKTiP+H6GSCj5JSygB3FrVMO5saskYMg6D209/t6MJJacWfaSO2CVsj24EuhlDsHU3/VyBYNJU8ErXSZAwpTX/2HNKa2ssQddUshmePHNh1aCqwDUt3HLmFqYS2jsLmiA5RzukShxVG/dProrgDvjv8AwxcxxF2COXKPqkD3uBdcNwSo2/pmmMs77ZZYU/xqSNkjkaJLQ5rl7UA6Z2RfcSMHvh6TSgzrv33+ZE8B8YuG701m2nEZde9X2oCj6UNH+0gqT6XWRdMiI0EvE8aZW1gtINS8D/0PmlBhOmyBV4DkqTCYyuZfBobCS9qGPz5roIPQj9ZBjMqP38XqwF8eLeLyDHTbONdnml4vmrmB1JZmW2h2B9PYrkIayBvXHF3vfw19aDzeDuwXLND9H0H+79WEMnKEs3+1uO8+clDjlrUtEUk7YW4cQC+3H69hPOeV0qDLK8+TSOwG4Ivdk8C7iDhUDiHacE403Ce/MbQBNxcP44FGc+lIWasRENyZ40/khR2Rq2Hci21Z6/9/PNh+3IU=
