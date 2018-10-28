@@ -1,28 +1,11 @@
-from docutils.nodes import Inline, Element, raw
+from docutils.nodes import raw, literal_block
 from docutils.parsers.rst import Directive, directives
 from sphinx.util.logging import logging
-
-from stylo.shape import Circle
-from stylo.color import FillColor
-from stylo.image import SimpleImage
 
 from .templates import render_image
 
 
 logger = logging.getLogger(__name__)
-
-
-class simpleimage(Inline, Element):
-    pass
-
-
-def get_image_data():
-
-    circle = Circle(fill=True)
-    color = FillColor()
-    image = SimpleImage(circle, color)
-
-    return image(1920, 1080, encode=True)
 
 
 class StyloImageDirective(Directive):
@@ -76,8 +59,6 @@ class StyloImageDirective(Directive):
 
     def run(self):
 
-        logger.warn("{}".format(self.options))
-
         self._compile_code()
 
         image_data = self._get_img_data().decode("utf8")
@@ -87,8 +68,9 @@ class StyloImageDirective(Directive):
         nodelist = [raw("", html, format="html")]
 
         if "include-code" in self.options.keys():
-            nodelist.append(
-                raw("", "<pre>{}</pre>".format("\n".join(self.content)), format="html")
-            )
+            code_block = literal_block(self.src, self.src)
+            code_block["language"] = "python"
+
+            nodelist.append(code_block)
 
         return nodelist
