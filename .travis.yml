@@ -3,7 +3,6 @@ python:
 - 3.6
 
 install:
-- pip install -r requirements.txt
 - pip install tox
 
 script:
@@ -11,6 +10,7 @@ script:
 
 deploy:
   provider: pypi
+  distributions: "sdist bdist_wheel"
   user: alcarney
   skip_cleanup: true
   password:
