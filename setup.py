@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-from sphinx_stylo import __version__
+exec(open("sphinx_stylo/_version.py").read())
 
 
 def readme():
