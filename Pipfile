@@ -9,6 +9,4 @@ stylo = "*"
 topos-theme = "*"
 
 [dev-packages]
-
-[requires]
-python_version = "3.7"
+tox = "*"
