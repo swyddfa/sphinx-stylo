@@ -1,13 +1,6 @@
 # Sphinx-Stylo
 
-|  |  |
-|:--:|--|
-|**Project** | [![PyPI - License](https://img.shields.io/pypi/l/sphinx-stylo.svg)](https://opensource.org/licenses/MIT)|
-|**Code**| [![Build Status](https://travis-ci.org/alcarney/sphinx-stylo.svg?branch=develop)](https://travis-ci.org/alcarney/sphinx-stylo) |
-|**PyPi**|[![PyPI](https://img.shields.io/pypi/v/sphinx-stylo.svg)](https://pypi.org/project/sphinx-stylo)|
-
-
-**It is extremely early stages for this extension. It is not likely to be robust**
+**This functionality has now been made core functionailty in the [arlunio](https://github.com/swyddfa/arlunio) project**
 
 Sphinx-Stylo is an extension to the [Sphinx](http://www.sphinx-doc.org/en/master/)
 documentation tool that allows you to insert dynamically generated images created using
